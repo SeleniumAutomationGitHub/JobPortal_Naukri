@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="NaukriJobPortal">
+	<test name="NaukriJobPortal Firefox Test Result">
+		<parameter name="browser" value="firefox"/>
+			<classes>
+				<class name="com.naukri.testscript.TestNaukri"/>
+					<methods>
+						<include name = "verifyLoginPage"/>
+						<include name = "verifyAttachedResume"/>
+						<include name = "verifyUploadResume"/>
+						<exclude name = "verifyLogOut"/>
+						<exclude name = "verifyloginAgain"/>
+					</methods>
+			</classes>
+		</test>
+		
+		<!--<test name="NaukriJobPortal Chrome Test Result">
+		<parameter name="browser" value="chrome"/>
+			<classes>
+				<class name="com.naukri.testscript.TestNaukri"/>
+					<methods>
+						<include name = "verifyLoginPage"/>
+						<include name = "verifyAttachedResume"/>
+						<include name = "verifyUploadResume"/>
+						<include name = "verifyLogOut"/>
+						<include name = "verifyloginAgain"/>
+					</methods>
+			</classes>
+		</test>-->
+</suite>

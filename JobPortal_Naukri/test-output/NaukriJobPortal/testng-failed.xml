@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [NaukriJobPortal]">
+  <parameter name="browser" value="chrome"/>
+  <test name="NaukriJobPortal Chrome Test Result(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.naukri.testscript.TestNaukri">
+        <methods>
+          <include name="verifyLoginPage"/>
+          <include name="verifyLogOut"/>
+          <include name="verifyUploadResume"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="verifyAttachedResume"/>
+          <include name="verifyloginAgain"/>
+        </methods>
+      </class> <!-- com.naukri.testscript.TestNaukri -->
+    </classes>
+  </test> <!-- NaukriJobPortal Chrome Test Result(failed) -->
+</suite> <!-- Failed suite [NaukriJobPortal] -->

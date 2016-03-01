@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="NaukriJobPortal" duration-ms="31612" started-at="2016-02-17T19:08:14Z" finished-at="2016-02-17T19:08:45Z">
+    <groups>
+    </groups>
+    <test name="NaukriJobPortal Firefox Test Result" duration-ms="31612" started-at="2016-02-17T19:08:14Z" finished-at="2016-02-17T19:08:45Z">
+      <class name="com.naukri.testscript.TestNaukri">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.naukri.testscript.TestNaukri@2752f6e2]" name="beforeTest" is-config="true" duration-ms="13622" started-at="2016-02-18T00:38:14Z" finished-at="2016-02-18T00:38:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="verifyLoginPage(java.lang.String, java.lang.String)[pri:0, instance:com.naukri.testscript.TestNaukri@2752f6e2]" name="verifyLoginPage" duration-ms="8731" started-at="2016-02-18T00:38:28Z" description="Verify the Naukri login page" data-provider="Authentication" finished-at="2016-02-18T00:38:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ksumanta.testing@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Selenium@143]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPage -->
+        <test-method status="PASS" signature="verifyAttachedResume()[pri:0, instance:com.naukri.testscript.TestNaukri@2752f6e2]" name="verifyAttachedResume" duration-ms="2144" started-at="2016-02-18T00:38:36Z" description="Verify My Naukri Page" finished-at="2016-02-18T00:38:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAttachedResume -->
+        <test-method status="PASS" signature="verifyUploadResume()[pri:0, instance:com.naukri.testscript.TestNaukri@2752f6e2]" name="verifyUploadResume" duration-ms="6787" started-at="2016-02-18T00:38:38Z" description="Verify uploading resume" finished-at="2016-02-18T00:38:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUploadResume -->
+      </class> <!-- com.naukri.testscript.TestNaukri -->
+    </test> <!-- NaukriJobPortal Firefox Test Result -->
+  </suite> <!-- NaukriJobPortal -->
+</testng-results>

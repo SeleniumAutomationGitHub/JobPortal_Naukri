@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Cashbook_PL]">
+  <test name="Cashbook_PL Test Result(failed)">
+    <classes>
+      <class name="com.cbpl.testscript.TestPL">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="verifyLoginPage" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.cbpl.testscript.TestPL -->
+    </classes>
+  </test> <!-- Cashbook_PL Test Result(failed) -->
+</suite> <!-- Failed suite [Cashbook_PL] -->
