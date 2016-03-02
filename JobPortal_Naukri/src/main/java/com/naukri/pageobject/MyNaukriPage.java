@@ -58,10 +58,6 @@ public class MyNaukriPage {
 	private WebElement loginAgain;
 	
 	
-	
-	
-	
-	
 	public void attachedResumeClick(){
 		try{
 			
@@ -72,7 +68,6 @@ public class MyNaukriPage {
 				
 				attachedResume.click();
 				InitializeDriver.driver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
-				//Thread.sleep(1000);
 				Assert.assertEquals(InitializeDriver.driver.getTitle(), "Update Profile|Mynaukri", "Not in update page" );
 			}
 			
@@ -136,7 +131,6 @@ public class MyNaukriPage {
 	
 	public void loginAgain(){
 		try{
-			//Thread.sleep(1000);
 			InitializeDriver.driver.manage().timeouts().setScriptTimeout(1000, TimeUnit.SECONDS);
 			if(loginAgain.isDisplayed() && loginAgain.isEnabled()){
 				//Right click
