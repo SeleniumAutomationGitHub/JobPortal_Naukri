@@ -33,7 +33,7 @@ public class TestNaukri {
   
   @DataProvider(name="Authentication")
   public Object[][] credentials() throws Exception{
-	  return DriverScriptExcel.getTestData("D:\\Projects\\Automation\\Workspace\\JobPortal_Naukri\\src\\test\\resources\\NaukriTestData.xls", "login");
+	  return DriverScriptExcel.getTestData(".\\src\\test\\resources\\NaukriTestData.xls", "login");
   }
   
   

@@ -107,8 +107,9 @@ public class MyNaukriPage {
 				System.out.println("Text color: " + color);
 				saveBtn.click();
 				InitializeDriver.driver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
-				
 				Assert.assertEquals(profileUpdatedMsg.getText(), "Your naukri profile has been updated with your uploaded resume", "Profile not updated successfully.");
+				System.out.println(successMsg.getText());
+				System.out.println("File uploaded successfully");
 			}
 			
 			}catch(Exception e){
@@ -125,6 +126,7 @@ public class MyNaukriPage {
 			if(logOut.isDisplayed() && logOut.isEnabled()){
 				logOut.click();				
 				Assert.assertEquals(logOutMsg.getText(), "You have successfully Logged out of naukri.com Login Again", "You have not loggout of naukri.com.");
+				System.out.println("Logout Successfully...!");
 			}
 			
 			}catch(Exception e){

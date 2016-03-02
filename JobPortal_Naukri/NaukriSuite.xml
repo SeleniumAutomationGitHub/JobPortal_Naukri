@@ -7,9 +7,9 @@
 				<class name="com.naukri.testscript.TestNaukri"/>
 					<methods>
 						<include name = "verifyLoginPage"/>
-						<exclude name = "verifyAttachedResume"/>
-						<exclude name = "verifyUploadResume"/>
-						<exclude name = "verifyLogOut"/>
+						<include name = "verifyAttachedResume"/>
+						<include name = "verifyUploadResume"/>
+						<include name = "verifyLogOut"/>
 						<exclude name = "verifyloginAgain"/>
 					</methods>
 			</classes>

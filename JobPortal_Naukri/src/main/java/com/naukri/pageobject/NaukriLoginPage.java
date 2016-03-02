@@ -116,6 +116,7 @@ public class NaukriLoginPage {
 					loginBtn.click();
 					wdw.until(ExpectedConditions.visibilityOf(MyNaukriPage.myNaukriIcon));
 					Assert.assertEquals(InitializeDriver.driver.getTitle(), "Mynaukri", "Failed login page");
+					System.out.println("Login Successfully...!");
 				}
 			}
 		} catch (Exception e) {
