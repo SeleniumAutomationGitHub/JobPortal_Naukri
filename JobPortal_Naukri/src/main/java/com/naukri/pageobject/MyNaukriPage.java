@@ -108,7 +108,6 @@ public class MyNaukriPage {
 				saveBtn.click();
 				InitializeDriver.driver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
 				Assert.assertEquals(profileUpdatedMsg.getText(), "Your naukri profile has been updated with your uploaded resume", "Profile not updated successfully.");
-				System.out.println(successMsg.getText());
 				System.out.println("File uploaded successfully");
 			}
 			
