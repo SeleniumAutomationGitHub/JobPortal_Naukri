@@ -33,6 +33,7 @@ public class NaukriLoginPage {
 		
 		try{
 			closeChildWindows();
+			System.out.println("All child windows closed.");
 			InitializeDriver.driver.manage().timeouts().setScriptTimeout(1000, TimeUnit.SECONDS);
 			if(InitializeDriver.driver.getTitle() !=null)
 			{
