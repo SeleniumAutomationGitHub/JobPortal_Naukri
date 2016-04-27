@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+
 
 import com.naukri.utilities.InitializeDriver;
+import org.testng.Assert;
 
 
 public class NaukriLoginPage {
@@ -33,7 +34,6 @@ public class NaukriLoginPage {
 		
 		try{
 			closeChildWindows();
-			System.out.println("All child windows closed.");
 			InitializeDriver.driver.manage().timeouts().setScriptTimeout(1000, TimeUnit.SECONDS);
 			if(InitializeDriver.driver.getTitle() !=null)
 			{
