@@ -84,7 +84,6 @@ public class MyNaukriPage {
 		try{
 			
 			if(uploadResume.isDisplayed() && uploadResume.isEnabled()){
-				
 				//click on upload new resume link
 				uploadResume.click();
 				InitializeDriver.driver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
@@ -92,9 +91,9 @@ public class MyNaukriPage {
 				//click on browse button
 				browseBtn.click();
 				InitializeDriver.driver.manage().timeouts().pageLoadTimeout(1000, TimeUnit.SECONDS);
-				
+
+				//Upload the resume here
 				Runtime.getRuntime().exec(".\\AutoIT\\selectResume.exe");
-				
 				wait.until(ExpectedConditions.visibilityOf(successMsg));
 				
 				Assert.assertEquals(successMsg.getText(), "File uploaded successfully.", "File not uploaded");

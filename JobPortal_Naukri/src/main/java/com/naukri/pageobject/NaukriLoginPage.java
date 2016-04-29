@@ -33,7 +33,8 @@ public class NaukriLoginPage {
 	public void loginPage(){
 		
 		try{
-			closeChildWindows();
+			//closeEachChildWindow();
+			closeAllChildWindows();
 			InitializeDriver.driver.manage().timeouts().setScriptTimeout(1000, TimeUnit.SECONDS);
 			if(InitializeDriver.driver.getTitle() !=null)
 			{
@@ -47,17 +48,12 @@ public class NaukriLoginPage {
 		}
 	}
 	
-	public void closeChildWindows()throws Exception{
-		
+	public void closeEachChildWindow()throws Exception{ //close each specific child window
 		String parentWindow = InitializeDriver.driver.getWindowHandle();
 		Set<String> allWindows = InitializeDriver.driver.getWindowHandles();
-		
 		if(allWindows.size()>0){
-			
 			for(String eachWindow:allWindows){
-				
 				InitializeDriver.driver.switchTo().window(eachWindow);
-				
 				switch(InitializeDriver.driver.getTitle())
 				{
 					case "Epicor":
@@ -65,31 +61,26 @@ public class NaukriLoginPage {
 						InitializeDriver.driver.close();
 						break;
 					}
-				
 					case "Incedo":
 					{
 						InitializeDriver.driver.close();
 						break;
 					}
-				
 					case "Cognizant":
 					{
 						InitializeDriver.driver.close();
 						break;
 					}
-				
 					case "Prokarma":
 					{
 						InitializeDriver.driver.close();
 						break;
 					}
-					
 					case "Amazon":
 					{
 						InitializeDriver.driver.close();
 						break;
 					}
-					
 					case "Alstom":
 					{
 						InitializeDriver.driver.close();
@@ -97,11 +88,28 @@ public class NaukriLoginPage {
 					}
 				}
 			}
-			
 			//Switch back to parent window
 			InitializeDriver.driver.switchTo().window(parentWindow);
 		}
 	}
+
+	public void closeAllChildWindows()throws Exception{ //close all child windows except parent window
+		String parentWindow = InitializeDriver.driver.getWindowHandle();
+		Set<String> allWindows = InitializeDriver.driver.getWindowHandles();
+		if(allWindows.size()>0){
+			for(String eachWindow:allWindows) {
+				InitializeDriver.driver.switchTo().window(eachWindow);
+				if (!InitializeDriver.driver.getTitle().equals("Jobs - Recruitment - Job Search - Employment - Job Vacancies - Naukri.com" )){
+					InitializeDriver.driver.close();
+				}
+			}
+			System.out.println("All child windows closed.");
+			//Switch back to parent window
+			InitializeDriver.driver.switchTo().window(parentWindow);
+		}
+	}
+
+
 	
 	public void jobSeekerLogin(String username, String passwd){
 		
