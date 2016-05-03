@@ -1,14 +1,14 @@
 package com.naukri.utilities;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.write.Label;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 public class DriverScriptExcel {
 	
@@ -86,17 +86,17 @@ public static void writeTestData(String path, String sheetName) throws Exception
 
 	
 	
-	public static void main(String[] args) throws Exception {
+	/*public static void main(String[] args) throws Exception {
 		
-		/*Object[][] obj = DriverScriptExcel.getTestData("D:\\Projects\\Automation\\Workspace\\Cashbook_PL\\src\\test\\resources\\ExcelTestData.xls", "Sheet3");
+		Object[][] obj = DriverScriptExcel.getTestData(".\\src\\test\\resources\\NaukriTestData.xls", "Sheet3");
 		
 		for(int i = 0; i<obj.length; i++){
 			for(int j=0; j<obj[i].length; j++){
 				System.out.println(obj[i][j]);
 			}
-		}*/
+		}
 		
-		DriverScriptExcel.writeTestData("C:\\Users\\SUMANTA\\Desktop\\ExcelTestDataResult.xls", "Result");
-	}
+		DriverScriptExcel.writeTestData(".\\src\\test\\resources\\TestResult.xls", "Result");
+	}*/
 
 }

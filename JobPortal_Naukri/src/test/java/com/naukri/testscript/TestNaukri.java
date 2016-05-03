@@ -1,32 +1,27 @@
 package com.naukri.testscript;
 
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
-
-import com.naukri.pageobject.NaukriLoginPage;
 import com.naukri.pageobject.MyNaukriPage;
+import com.naukri.pageobject.NaukriLoginPage;
 import com.naukri.utilities.DriverScriptExcel;
 import com.naukri.utilities.InitializeDriver;
 import com.naukri.utilities.InitializeURL;
 
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
 
 
 public class TestNaukri {
 	
-	
 	NaukriLoginPage nlp;
 	MyNaukriPage mnp;
-	
-  
+
   @Parameters("browser")
   @BeforeTest
     public void beforeTest(String browser) {
-	  
 	  InitializeDriver.driver = InitializeDriver.launchBrowser(browser);
 	  new InitializeURL().lunchURL("http://www.naukri.com/");
 	  
@@ -67,10 +62,10 @@ public class TestNaukri {
 	  mnp.loginAgain();
     }
 
-  @AfterTest
+  @AfterTest(enabled = false)
     public void closeBrowser()throws Exception{
       Thread.sleep(1000);
-      //InitializeDriver.driver.manage().timeouts().setScriptTimeout(2000, TimeUnit.SECONDS);
+     // InitializeDriver.driver.manage().timeouts().setScriptTimeout(2000, TimeUnit.SECONDS);
       InitializeDriver.driver.quit();
       System.out.println("Browser closed.");
     }

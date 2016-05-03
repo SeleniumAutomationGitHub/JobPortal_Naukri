@@ -1,16 +1,16 @@
 package com.naukri.pageobject;
 
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
+import com.naukri.utilities.InitializeDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-import com.naukri.utilities.InitializeDriver;
 import org.testng.Assert;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+
 
 
 public class NaukriLoginPage {
@@ -33,6 +33,7 @@ public class NaukriLoginPage {
 	public void loginPage(){
 		
 		try{
+
 			//closeEachChildWindow();
 			closeAllChildWindows();
 			InitializeDriver.driver.manage().timeouts().setScriptTimeout(1000, TimeUnit.SECONDS);
