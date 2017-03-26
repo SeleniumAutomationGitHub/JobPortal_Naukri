@@ -23,7 +23,7 @@ public class TestNaukri {
   @BeforeTest
     public void beforeTest(String browser) {
 	  InitializeDriver.driver = InitializeDriver.launchBrowser(browser);
-	  new InitializeURL().lunchURL("http://www.naukri.com/");
+	  new InitializeURL().lunchURL("https://www.naukri.com/");
 	  
 	  nlp = PageFactory.initElements(InitializeDriver.driver, NaukriLoginPage.class);
 	  mnp = PageFactory.initElements(InitializeDriver.driver, MyNaukriPage.class);
